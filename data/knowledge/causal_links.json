@@ -1,0 +1,149 @@
+{
+  "nodes": [
+    "soil_organic_carbon",
+    "soil_ph",
+    "soil_moisture",
+    "microbial_diversity",
+    "nutrient_cycling",
+    "plant_diversity",
+    "habitat_heterogeneity",
+    "species_richness",
+    "pollinators",
+    "rainfall",
+    "temperature_extremes",
+    "fragmentation",
+    "pesticide_load",
+    "deforestation",
+    "erosion",
+    "water_infiltration",
+    "microclimate"
+  ],
+  "edges": [
+    {
+      "from": "soil_organic_carbon",
+      "to": "microbial_diversity",
+      "sign": "+",
+      "mechanism": "SOC is both habitat and energy source for bacteria, fungi and soil fauna; below ~0.5–1% the food web collapses toward oligotrophic specialists.",
+      "sources": ["FAO 2017 Soil Organic Carbon: the hidden potential", "Barrios 2007 Ecological functions of soil fauna"]
+    },
+    {
+      "from": "microbial_diversity",
+      "to": "nutrient_cycling",
+      "sign": "+",
+      "mechanism": "Diverse microbial guilds mineralize N and P, form mycorrhizae, and stabilize aggregates that protect remaining carbon.",
+      "sources": ["Wagg et al. 2014 PNAS soil biodiversity and ecosystem multifunctionality"]
+    },
+    {
+      "from": "nutrient_cycling",
+      "to": "plant_diversity",
+      "sign": "+",
+      "mechanism": "More even nutrient supply and symbiotic associations allow subordinate native plants to persist instead of a few nitrophilous weeds.",
+      "sources": ["van der Heijden et al. 2008 Ecology Letters mycorrhizal fungi"]
+    },
+    {
+      "from": "plant_diversity",
+      "to": "habitat_heterogeneity",
+      "sign": "+",
+      "mechanism": "Structurally mixed plant canopies create niches for insects, birds and small mammals.",
+      "sources": ["Cardinale et al. 2012 Nature biodiversity loss"]
+    },
+    {
+      "from": "habitat_heterogeneity",
+      "to": "species_richness",
+      "sign": "+",
+      "mechanism": "Heterogeneous habitats support more trophic levels and reduce competitive exclusion.",
+      "sources": ["Tews et al. 2004 Journal of Biogeography habitat heterogeneity"]
+    },
+    {
+      "from": "rainfall",
+      "to": "soil_moisture",
+      "sign": "+",
+      "mechanism": "Precipitation is the primary input to plant-available water; in semi-arid systems small changes in infiltration dominate outcomes.",
+      "sources": ["Noy-Meir 1973 Annual Review of Ecology and Systematics"]
+    },
+    {
+      "from": "soil_organic_carbon",
+      "to": "water_infiltration",
+      "sign": "+",
+      "mechanism": "Humus and fungal hyphae increase aggregate stability and porosity, raising infiltration and plant-available water.",
+      "sources": ["Hudson 1994 Journal of Soil and Water Conservation", "Lal 2004 Geoderma"]
+    },
+    {
+      "from": "water_infiltration",
+      "to": "soil_moisture",
+      "sign": "+",
+      "mechanism": "Higher infiltration stores rainfall in the root zone instead of losing it to runoff and evaporation.",
+      "sources": ["FAO 2017"]
+    },
+    {
+      "from": "soil_moisture",
+      "to": "species_richness",
+      "sign": "+",
+      "mechanism": "Plant-available water is a first-order constraint on primary production and therefore on consumer diversity, especially in drylands.",
+      "sources": ["IPCC 2019 Climate Change and Land", "Maestre et al. 2012 Science dryland biodiversity"]
+    },
+    {
+      "from": "fragmentation",
+      "to": "species_richness",
+      "sign": "-",
+      "mechanism": "Small, isolated patches lose area-sensitive species, disrupt dispersal, and suffer edge-driven microclimate drying.",
+      "sources": ["Haddad et al. 2015 Science habitat fragmentation", "Newbold et al. 2015 Nature"]
+    },
+    {
+      "from": "deforestation",
+      "to": "microclimate",
+      "sign": "-",
+      "mechanism": "Canopy loss raises surface temperature, vapor-pressure deficit and erosion, accelerating SOC oxidation.",
+      "sources": ["IPCC 2019 Climate Change and Land", "Lawrence and Vandecar 2015 Nature Climate Change"]
+    },
+    {
+      "from": "deforestation",
+      "to": "fragmentation",
+      "sign": "+",
+      "mechanism": "Forest conversion both reduces habitat area and increases isolation of remaining patches.",
+      "sources": ["IPBES 2019 Global Assessment"]
+    },
+    {
+      "from": "pesticide_load",
+      "to": "pollinators",
+      "sign": "-",
+      "mechanism": "Insecticides (notably neonics) and some fungicides reduce wild bee survival, navigation and nesting success.",
+      "sources": ["Woodcock et al. 2017 Science neonicotinoids", "IPBES 2016 Pollinators"]
+    },
+    {
+      "from": "pollinators",
+      "to": "plant_diversity",
+      "sign": "+",
+      "mechanism": "Animal pollination maintains sexually reproducing wild plants and many fruit/seed crops.",
+      "sources": ["Garibaldi et al. 2013 Science", "IPBES 2016"]
+    },
+    {
+      "from": "soil_ph",
+      "to": "microbial_diversity",
+      "sign": "~",
+      "mechanism": "Community composition shifts strongly with pH; extreme acidity or alkalinity reduces functional guild richness.",
+      "sources": ["Fierer and Jackson 2006 PNAS soil bacteria pH"]
+    },
+    {
+      "from": "erosion",
+      "to": "soil_organic_carbon",
+      "sign": "-",
+      "mechanism": "Topsoil holds most SOC and seeds; sheet erosion permanently exports the biologically active layer.",
+      "sources": ["Lal 2003 Environment International"]
+    },
+    {
+      "from": "temperature_extremes",
+      "to": "species_richness",
+      "sign": "-",
+      "mechanism": "Heat and drought extremes disproportionately kill specialized and less-mobile species; diverse systems are more resistant.",
+      "sources": ["Isbell et al. 2015 Nature", "IPCC AR6 WGII"]
+    },
+    {
+      "from": "habitat_heterogeneity",
+      "to": "pollinators",
+      "sign": "+",
+      "mechanism": "Floral continuity and nesting substrates in hedgerows, fallows and forest edges sustain wild pollinators.",
+      "sources": ["Dainese et al. 2019 Science Advances", "Kremen and Miles 2012"]
+    }
+  ]
+}

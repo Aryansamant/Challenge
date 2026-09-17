@@ -1,0 +1,635 @@
+[
+  {
+    "id": "legume_cover_crops",
+    "title": "Legume-based cover crops in the idle window",
+    "action": "Plant a locally adapted legume cover (e.g. cowpea, lablab, vetch, or clover) in the off-season or as a relay, terminate before water competition with the cash crop, and retain residues as mulch.",
+    "applies_when": {
+      "land_types": ["cropland", "mixed", "degraded"],
+      "management": ["monoculture", "rotation", "conventional"],
+      "rainfall": ["semi-arid", "sub-humid", "humid"],
+      "avoid_if_rainfall": ["arid"]
+    },
+    "addresses": ["soil_organic_carbon", "soil_moisture", "plant_diversity", "microbial_diversity"],
+    "why": "Legumes fix atmospheric N via rhizobia, reducing synthetic N demand, while root exudates and residues feed soil food webs. Meta-analyses show cover crops sequester on the order of 0.3 Mg C ha−1 yr−1 and lift microbial and pollinator resources versus bare fallow.",
+    "effects": [
+      {
+        "metric": "soil organic carbon",
+        "direction": "increase",
+        "expected_change": "~0.22–0.40 Mg C ha−1 yr−1; ~10–25% relative SOC gain over 2–4 years on depleted soils",
+        "mechanism": "Below-ground C inputs plus reduced erosion of C-rich topsoil"
+      },
+      {
+        "metric": "species richness / microbial diversity",
+        "direction": "increase",
+        "expected_change": "Higher bacterial/fungal biomass and floral resources for pollinators vs bare fallow",
+        "mechanism": "Living roots and flowers extend habitat through the fallow window"
+      },
+      {
+        "metric": "soil moisture / infiltration",
+        "direction": "increase",
+        "expected_change": "Improved aggregation; mulch cuts evaporative loss (site-dependent)",
+        "mechanism": "Residue cover and SOC-linked porosity"
+      }
+    ],
+    "time_horizon": "medium",
+    "confidence": "high",
+    "synergies": ["residue_mulch_microcatchments", "reduced_disturbance", "pollinator_strips"],
+    "caveats": [
+      "In true arid systems, cover crops can compete for scarce water — prefer sparse mulch or native fallow rather than a dense cover.",
+      "Terminate 2–3 weeks before sowing the cash crop in dry years."
+    ],
+    "citations": [
+      {
+        "source": "Poeplau & Don 2015",
+        "year": 2015,
+        "citation": "Poeplau, C. & Don, A. (2015). Carbon sequestration in agricultural soils via cultivation of cover crops – A meta-analysis. Agriculture, Ecosystems & Environment, 200, 33–41.",
+        "snippet": "Global meta-analysis: mean SOC sequestration 0.32 ± 0.08 Mg C ha−1 yr−1 under cover crops, accumulating over decades rather than saturating immediately."
+      },
+      {
+        "source": "FAO 2017",
+        "year": 2017,
+        "citation": "FAO (2017). Soil Organic Carbon: the hidden potential. Rome.",
+        "snippet": "Raising SOC on degraded cropland improves water holding, nutrient buffering and biological activity — the biophysical basis of on-farm biodiversity."
+      }
+    ]
+  },
+  {
+    "id": "agroforestry_intercrop",
+    "title": "Agroforestry or fertilizer-tree intercropping",
+    "action": "Introduce a wide-spaced, multi-purpose tree layer (e.g. Faidherbia, Gliricidia, fruit or nitrogen-fixing shrubs) at densities that protect soil without fully shading the staple crop; prune for mulch.",
+    "applies_when": {
+      "land_types": ["cropland", "pasture", "mixed", "degraded"],
+      "rainfall": ["semi-arid", "sub-humid", "humid"],
+      "management": ["monoculture", "rotation", "grazed"]
+    },
+    "addresses": ["soil_organic_carbon", "habitat_heterogeneity", "species_richness", "microclimate", "fragmentation"],
+    "why": "Trees add vertical habitat, perennial roots, litter C, and microclimate buffering. This simultaneously raises SOC, cuts heat/wind stress, and reconnects habitat in agricultural mosaics — a multi-metric intervention, not a single-input fix.",
+    "effects": [
+      {
+        "metric": "soil organic carbon",
+        "direction": "increase",
+        "expected_change": "Typically 0.3–1.0 Mg C ha−1 yr−1 in the tree-crop interface over a decade; larger on degraded soils",
+        "mechanism": "Litter, root turnover, and reduced erosion"
+      },
+      {
+        "metric": "habitat diversity / species richness",
+        "direction": "increase",
+        "expected_change": "Documented gains in birds, insects and soil fauna versus treeless monoculture",
+        "mechanism": "Structural complexity and year-round resources"
+      },
+      {
+        "metric": "microclimate / water-use efficiency",
+        "direction": "stabilize",
+        "expected_change": "Lower canopy temperature and wind speed; improved soil moisture under tree influence",
+        "mechanism": "Shade, windbreak and hydraulic lift in some species"
+      }
+    ],
+    "time_horizon": "long",
+    "confidence": "high",
+    "synergies": ["legume_cover_crops", "fmnr", "riparian_restoration"],
+    "caveats": [
+      "Tree-crop competition for water is real in dry years — use wide spacing, deciduous N-fixers, and root-pruning.",
+      "Choose native or proven naturalized species to avoid invasiveness."
+    ],
+    "citations": [
+      {
+        "source": "Jose 2009",
+        "year": 2009,
+        "citation": "Jose, S. (2009). Agroforestry for ecosystem services and environmental benefits: an overview. Agroforestry Systems, 76, 1–10.",
+        "snippet": "Agroforestry systems provide carbon storage, biodiversity habitat, and erosion control as coupled ecosystem services rather than isolated benefits."
+      },
+      {
+        "source": "IPCC 2019 SRCCL",
+        "year": 2019,
+        "citation": "IPCC (2019). Climate Change and Land. Special Report on Climate Change and Land, Chapter 6.",
+        "snippet": "Agroforestry is assessed as a land-based option with mitigation and adaptation co-benefits, including biodiversity, when implemented with local species and tenure safeguards."
+      }
+    ]
+  },
+  {
+    "id": "diversified_intercropping",
+    "title": "Break the monoculture: spatial or rotational diversification",
+    "action": "Replace sole-cropped stands with an intercrop (cereal–legume strips) or a 3–4 year rotation that includes a pulse, an oilseed or a fodder, plus at least one unmanaged field-margin.",
+    "applies_when": {
+      "land_types": ["cropland"],
+      "management": ["monoculture", "conventional", "rotation"]
+    },
+    "addresses": ["plant_diversity", "species_richness", "soil_organic_carbon", "pollinators", "pesticide_load"],
+    "why": "Monocultures simplify the resource base and select for specialist pests. Diversification restores complementary rooting, pest-natural-enemy habitat and floral resources. Global syntheses find consistent (if variable) gains across yield stability, SOC and biodiversity metrics.",
+    "effects": [
+      {
+        "metric": "species richness",
+        "direction": "increase",
+        "expected_change": "Positive effects on associated biodiversity in the majority of diversification studies",
+        "mechanism": "More niches, fewer pesticide cycles, floral continuity"
+      },
+      {
+        "metric": "soil organic carbon",
+        "direction": "increase",
+        "expected_change": "Modest SOC and N-use gains, larger when legumes and perennials enter the rotation",
+        "mechanism": "Diverse residue chemistry and living-root duration"
+      },
+      {
+        "metric": "pest pressure / pesticide need",
+        "direction": "decrease",
+        "expected_change": "Lower specialist pest build-up; potential to cut insecticide passes",
+        "mechanism": "Natural enemies and disrupted host concentration"
+      }
+    ],
+    "time_horizon": "medium",
+    "confidence": "high",
+    "synergies": ["legume_cover_crops", "pollinator_strips", "ipm_pesticide_reduction"],
+    "caveats": [
+      "Diversification is not automatically organic — pesticide regimes must be redesigned or benefits to insects will be cancelled."
+    ],
+    "citations": [
+      {
+        "source": "Tamburini et al. 2020",
+        "year": 2020,
+        "citation": "Tamburini, G. et al. (2020). Agricultural diversification promotes multiple ecosystem services without compromising yield. Science Advances, 6, eaba1715.",
+        "snippet": "Diversification strategies enhance biodiversity and multiple ecosystem services, including soil fertility and pest control, without a systematic yield penalty."
+      },
+      {
+        "source": "Beillouin et al. 2021",
+        "year": 2021,
+        "citation": "Beillouin, D. et al. (2021). Positive but variable effects of crop diversification on biodiversity and ecosystem services. Global Change Biology.",
+        "snippet": "Effects are robustly positive for biodiversity yet vary by practice and climate — targeting the local limiting factor matters more than applying a generic mix."
+      }
+    ]
+  },
+  {
+    "id": "residue_mulch_microcatchments",
+    "title": "Micro-catchments, contour bunds and residue mulch",
+    "action": "On sloping or crusting dryland soils, build contour bunds, zai/tassa pits or half-moons; keep 30%+ residue cover; direct scarce rainfall into the root zone.",
+    "applies_when": {
+      "land_types": ["cropland", "degraded", "pasture"],
+      "rainfall": ["arid", "semi-arid"]
+    },
+    "addresses": ["soil_moisture", "erosion", "soil_organic_carbon", "species_richness"],
+    "why": "In drylands, biodiversity is water-limited. Infiltration engineering multiplies the value of every millimetre and stops the SOC–erosion spiral. This is more leverage than adding nutrients on a crusted, eroding surface.",
+    "effects": [
+      {
+        "metric": "soil moisture",
+        "direction": "increase",
+        "expected_change": "Zai pits and bunds commonly raise plant-available water and survival of planted trees/crops in Sahelian trials",
+        "mechanism": "Run-on concentration + reduced crusting"
+      },
+      {
+        "metric": "erosion",
+        "direction": "decrease",
+        "expected_change": "Sharp drop in sheet erosion once residue cover exceeds ~30%",
+        "mechanism": "Raindrop energy interception and slower overland flow"
+      },
+      {
+        "metric": "soil organic carbon",
+        "direction": "increase",
+        "expected_change": "SOC recovery follows once topsoil stops leaving the field",
+        "mechanism": "Retention of C-rich surface soil plus biomass inputs"
+      }
+    ],
+    "time_horizon": "short",
+    "confidence": "high",
+    "synergies": ["fmnr", "agroforestry_intercrop", "legume_cover_crops"],
+    "caveats": [
+      "Poorly sited bunds can waterlog or fail in intense storms — follow local contour and soil-depth guidance."
+    ],
+    "citations": [
+      {
+        "source": "FAO / WOCAT dryland restoration",
+        "year": 2011,
+        "citation": "Sawadogo, H. (2011). Using soil and water conservation practices to restore land productivity in the drylands of Burkina Faso. In: FAO, Fighting land degradation.",
+        "snippet": "Zai, stone bunds and compost jointly restored productivity and woody cover on degraded crusted soils — a water–carbon–biodiversity package."
+      },
+      {
+        "source": "Hudson 1994",
+        "year": 1994,
+        "citation": "Hudson, B.D. (1994). Soil organic matter and available water capacity. Journal of Soil and Water Conservation, 49, 189–194.",
+        "snippet": "Each additional unit of organic matter measurably raises available water capacity, coupling SOC management to drought buffering."
+      }
+    ]
+  },
+  {
+    "id": "hedgerows_corridors",
+    "title": "Hedgerows, beetle banks and habitat corridors",
+    "action": "Convert 5–10% of the least productive field area into native hedgerows, grassy beetle banks or riparian strips that connect remaining habitat patches.",
+    "applies_when": {
+      "land_types": ["cropland", "pasture", "mixed", "degraded"],
+      "fragmentation": ["high", "moderate", "unknown"]
+    },
+    "addresses": ["fragmentation", "species_richness", "pollinators", "habitat_heterogeneity"],
+    "why": "Below ~10–20% semi-natural cover, landscapes cross connectivity thresholds. Linear habitats restore dispersal at low opportunity cost and supply nesting sites that in-field practices alone cannot.",
+    "effects": [
+      {
+        "metric": "species richness",
+        "direction": "increase",
+        "expected_change": "Higher bird, pollinator and natural-enemy abundance along connected margins",
+        "mechanism": "Dispersal rescue + nesting/foraging habitat"
+      },
+      {
+        "metric": "pollinators",
+        "direction": "increase",
+        "expected_change": "Wild bee richness scales with nearby semi-natural habitat",
+        "mechanism": "Floral continuity and untilled nesting ground"
+      },
+      {
+        "metric": "habitat fragmentation",
+        "direction": "decrease",
+        "expected_change": "Reduced isolation of remnant patches at farm-to-landscape scale",
+        "mechanism": "Stepping-stone and corridor function"
+      }
+    ],
+    "time_horizon": "medium",
+    "confidence": "high",
+    "synergies": ["ipm_pesticide_reduction", "pollinator_strips", "riparian_restoration"],
+    "caveats": [
+      "Corridors can also move pests and fire — use native mixes and maintain gaps as firebreaks where needed."
+    ],
+    "citations": [
+      {
+        "source": "Haddad et al. 2015",
+        "year": 2015,
+        "citation": "Haddad, N.M. et al. (2015). Habitat fragmentation and its lasting impact on Earth’s ecosystems. Science Advances, 1, e1500052.",
+        "snippet": "Fragmentation reduces biodiversity by 13–75% and impairs ecosystem functions; effects worsen for at least a decade and are not offset by habitat amount alone."
+      },
+      {
+        "source": "Dainese et al. 2019",
+        "year": 2019,
+        "citation": "Dainese, M. et al. (2019). A global synthesis reveals biodiversity-mediated benefits for crop production. Science Advances, 5, eaax0121.",
+        "snippet": "Landscape-scale semi-natural habitat supports pollination and pest control that feed back to production — farm practices and landscape context interact."
+      }
+    ]
+  },
+  {
+    "id": "pollinator_strips",
+    "title": "Native wildflower / pollinator strips",
+    "action": "Seed 2–6 m native wildflower and bunchgrass strips on field edges and pivot corners; keep them unsprayed and mow after peak bloom.",
+    "applies_when": {
+      "land_types": ["cropland", "mixed", "urban"],
+      "management": ["monoculture", "rotation", "conventional", "organic"]
+    },
+    "addresses": ["pollinators", "plant_diversity", "species_richness", "pesticide_load"],
+    "why": "Floral dearth in cereal monocultures is a binding constraint on wild bees even when nesting sites exist. Strips restore phenological continuity and, unlike honeybee dumps, rebuild native assemblages.",
+    "effects": [
+      {
+        "metric": "pollinators",
+        "direction": "increase",
+        "expected_change": "Multi-fold increases in wild bee abundance on unsprayed native strips within 1–3 seasons",
+        "mechanism": "Continuous nectar/pollen and untilled ground"
+      },
+      {
+        "metric": "plant diversity",
+        "direction": "increase",
+        "expected_change": "Native forb richness in the strip plus spillover pollination of wild plants",
+        "mechanism": "Reintroduced floral species and pollinator rescue"
+      }
+    ],
+    "time_horizon": "short",
+    "confidence": "high",
+    "synergies": ["ipm_pesticide_reduction", "hedgerows_corridors", "diversified_intercropping"],
+    "caveats": [
+      "Strips next to high insecticide use become ecological traps — pair with IPM.",
+      "Use local ecotypes; ornamental mixes can be invasive or nutritionally poor."
+    ],
+    "citations": [
+      {
+        "source": "Garibaldi et al. 2013",
+        "year": 2013,
+        "citation": "Garibaldi, L.A. et al. (2013). Wild pollinators enhance fruit set of crops regardless of honey bee abundance. Science, 339, 1608–1611.",
+        "snippet": "Wild insects pollinate crops more effectively than honey bees; habitat for wild pollinators is not substitutable by hive density."
+      },
+      {
+        "source": "IPBES 2016",
+        "year": 2016,
+        "citation": "IPBES (2016). Assessment Report on Pollinators, Pollination and Food Production.",
+        "snippet": "Land-use change, pesticides and habitat homogenization are leading drivers of wild pollinator decline; floral strips and reduced spraying are evidence-based responses."
+      }
+    ]
+  },
+  {
+    "id": "ipm_pesticide_reduction",
+    "title": "Pesticide reduction via IPM thresholds",
+    "action": "Replace calendar spraying with scouting thresholds, seed-treatment review, selective products, and night-time or post-bloom application windows; create unsprayed refuges.",
+    "applies_when": {
+      "pesticide_intensity": ["high", "moderate", "unknown"],
+      "land_types": ["cropland", "mixed"]
+    },
+    "addresses": ["pollinators", "microbial_diversity", "species_richness", "pesticide_load"],
+    "why": "Chemical pressure is a direct, fast driver of insect and soil-fauna loss. Cutting non-target exposure often yields biodiversity gains in a single season, while habitat work pays out over years — the two must be sequenced together.",
+    "effects": [
+      {
+        "metric": "pollinators and aquatic invertebrates",
+        "direction": "increase",
+        "expected_change": "Recovery of sensitive insect groups within 1–3 years after neonic/broad-spectrum reductions",
+        "mechanism": "Lower lethal and sublethal exposure"
+      },
+      {
+        "metric": "soil fauna / microbial function",
+        "direction": "increase",
+        "expected_change": "Reduced disruption of mycorrhizae and decomposers from fungicides and soil insecticides",
+        "mechanism": "Release from chronic toxic stress"
+      }
+    ],
+    "time_horizon": "short",
+    "confidence": "high",
+    "synergies": ["pollinator_strips", "diversified_intercropping", "hedgerows_corridors"],
+    "caveats": [
+      "Abruptly dropping all protection without agronomic substitutes can spike pest outbreaks — use thresholds, not slogans."
+    ],
+    "citations": [
+      {
+        "source": "Woodcock et al. 2017",
+        "year": 2017,
+        "citation": "Woodcock, B.A. et al. (2017). Country-specific effects of neonicotinoid pesticides on honey bees and wild bees. Science, 356, 1393–1395.",
+        "snippet": "Field-realistic neonicotinoid exposure reduces wild bee reproductive success; effects are country- and species-specific but directionally negative."
+      },
+      {
+        "source": "IPBES 2016",
+        "year": 2016,
+        "citation": "IPBES (2016). Pollinators, Pollination and Food Production.",
+        "snippet": "Pesticide risk reduction is a high-confidence response option for pollinator conservation."
+      }
+    ]
+  },
+  {
+    "id": "ph_amendment",
+    "title": "Targeted pH correction (lime or gypsum)",
+    "action": "If pH < 5.5, apply agricultural lime based on a buffer test; if sodic/alkaline (pH > 8.3 with high ESP), use gypsum plus drainage and organic matter — never lime an already alkaline soil.",
+    "applies_when": {
+      "ph_acid": true,
+      "ph_alkaline": true
+    },
+    "addresses": ["soil_ph", "microbial_diversity", "nutrient_cycling", "plant_diversity"],
+    "why": "Soil pH is a master variable for microbial community structure (Fierer & Jackson). Extreme pH locks phosphorus, mobilizes Al, and filters out whole guilds of bacteria and plants. Correcting it unlocks other interventions.",
+    "effects": [
+      {
+        "metric": "microbial diversity",
+        "direction": "increase",
+        "expected_change": "Community composition shifts toward higher richness as pH approaches 6–7",
+        "mechanism": "Relief of Al toxicity and restored enzyme optima"
+      },
+      {
+        "metric": "nutrient availability",
+        "direction": "increase",
+        "expected_change": "P, Mo and base cations become more plant-available in previously acidic soils",
+        "mechanism": "Speciation and desorption chemistry"
+      }
+    ],
+    "time_horizon": "short",
+    "confidence": "high",
+    "synergies": ["organic_amendments", "legume_cover_crops"],
+    "caveats": [
+      "Overliming creates micronutrient deficiencies. Always test; do not guess rates.",
+      "Organic matter without addressing extreme pH will underperform."
+    ],
+    "citations": [
+      {
+        "source": "Fierer & Jackson 2006",
+        "year": 2006,
+        "citation": "Fierer, N. & Jackson, R.B. (2006). The diversity and biogeography of soil bacterial communities. PNAS, 103, 626–631.",
+        "snippet": "Soil pH is the strongest predictor of bacterial diversity and richness at continental scales."
+      }
+    ]
+  },
+  {
+    "id": "organic_amendments",
+    "title": "Compost or well-cured manure as a microbial primer",
+    "action": "Apply modest, well-composted organic amendments (typically 5–15 t ha−1) to degraded spots rather than blanket dumping raw manure; combine with residue retention.",
+    "applies_when": {
+      "land_types": ["cropland", "degraded", "pasture", "urban"],
+      "soc_low": true
+    },
+    "addresses": ["soil_organic_carbon", "microbial_diversity", "soil_moisture", "nutrient_cycling"],
+    "why": "On soils with SOC near 0.3%, biological energy is the missing habitat. Compost inoculates and feeds microbes while adding stable C. It is a primer, not a substitute for living-root systems.",
+    "effects": [
+      {
+        "metric": "soil organic carbon",
+        "direction": "increase",
+        "expected_change": "Part of applied C is retained; largest relative gains on the most depleted soils",
+        "mechanism": "Direct C addition + stimulated plant inputs"
+      },
+      {
+        "metric": "microbial biomass",
+        "direction": "increase",
+        "expected_change": "Rapid rise in microbial biomass carbon within one season",
+        "mechanism": "Labile C and diverse substrates"
+      }
+    ],
+    "time_horizon": "short",
+    "confidence": "moderate",
+    "synergies": ["legume_cover_crops", "residue_mulch_microcatchments", "ph_amendment"],
+    "caveats": [
+      "Raw manure can load P, salts, antibiotics and weed seed — compost first.",
+      "Do not mine wetlands or forests for 'amendments'."
+    ],
+    "citations": [
+      {
+        "source": "Lal 2004",
+        "year": 2004,
+        "citation": "Lal, R. (2004). Soil carbon sequestration to mitigate climate change. Geoderma, 123, 1–22.",
+        "snippet": "Organic amendments, residue management and reduced disturbance are core SOC restoration levers on agricultural soils."
+      },
+      {
+        "source": "FAO 2017",
+        "year": 2017,
+        "citation": "FAO (2017). Soil Organic Carbon: the hidden potential.",
+        "snippet": "Rebuilding SOC is described as a practical route to soil biodiversity, water regulation and productivity co-benefits."
+      }
+    ]
+  },
+  {
+    "id": "reduced_disturbance",
+    "title": "Reduce tillage intensity and keep living roots",
+    "action": "Shift from inversion ploughing to strip-till or no-till only where residue cover, weed strategy and compaction risk allow; never drop tillage without a cover-crop or residue plan.",
+    "applies_when": {
+      "land_types": ["cropland"],
+      "tillage": ["conventional", "inversion", "unknown"]
+    },
+    "addresses": ["soil_organic_carbon", "microbial_diversity", "erosion", "soil_moisture"],
+    "why": "Tillage oxidizes protected SOC, severs fungal hyphae and leaves soil bare to rain. Reducing disturbance helps only if residues stay on the surface — otherwise herbicide-only no-till can harm biodiversity even as SOC at the surface rises.",
+    "effects": [
+      {
+        "metric": "soil organic carbon (surface)",
+        "direction": "increase",
+        "expected_change": "Surface SOC enrichment; profile-wide gains are smaller and climate-dependent",
+        "mechanism": "Slower oxidation and residue accumulation"
+      },
+      {
+        "metric": "fungal networks / soil fauna",
+        "direction": "increase",
+        "expected_change": "Recovery of hyphal networks and earthworms when chemicals are not increased in parallel",
+        "mechanism": "Physical habitat continuity"
+      }
+    ],
+    "time_horizon": "medium",
+    "confidence": "moderate",
+    "synergies": ["legume_cover_crops", "residue_mulch_microcatchments"],
+    "caveats": [
+      "No-till that increases glyphosate or residual herbicides can negate biodiversity gains.",
+      "On poorly drained clays, some strategic tillage may still be needed."
+    ],
+    "citations": [
+      {
+        "source": "Six et al. 2006 / Powlson et al. 2014",
+        "year": 2014,
+        "citation": "Powlson, D.S. et al. (2014). Limited potential of no-till agriculture for climate change mitigation. Nature Climate Change, 4, 678–683.",
+        "snippet": "No-till redistributes rather than reliably sequesters large new C stocks; biodiversity and erosion benefits can still be real if residues are retained."
+      }
+    ]
+  },
+  {
+    "id": "fmnr",
+    "title": "Farmer-managed natural regeneration of native woody cover",
+    "action": "Protect and prune existing rootstock/stumps of native trees instead of planting nursery stock; combine with grazing control during establishment.",
+    "applies_when": {
+      "land_types": ["degraded", "pasture", "cropland", "mixed"],
+      "rainfall": ["arid", "semi-arid", "sub-humid"],
+      "deforestation": ["high", "moderate", "unknown"]
+    },
+    "addresses": ["deforestation", "habitat_heterogeneity", "soil_organic_carbon", "species_richness", "microclimate"],
+    "why": "In many drylands the seed/root bank still exists. FMNR is faster, cheaper and more genetically local than planting, restoring woody habitat that underpins birds, insects and soil microclimate.",
+    "effects": [
+      {
+        "metric": "woody cover / habitat",
+        "direction": "increase",
+        "expected_change": "Tree densities can rebound from near-zero to tens–hundreds per hectare within 5–10 years",
+        "mechanism": "Release of suppressed rootstock"
+      },
+      {
+        "metric": "soil organic carbon and microclimate",
+        "direction": "increase",
+        "expected_change": "Litter and shade reduce soil temperature and evaporation",
+        "mechanism": "Perennial root and canopy effects"
+      }
+    ],
+    "time_horizon": "medium",
+    "confidence": "high",
+    "synergies": ["residue_mulch_microcatchments", "managed_grazing", "agroforestry_intercrop"],
+    "caveats": [
+      "Requires social agreement to delay fuelwood cutting and to manage livestock during regeneration."
+    ],
+    "citations": [
+      {
+        "source": "Reij & Garrity 2016",
+        "year": 2016,
+        "citation": "Reij, C. & Garrity, D. (2016). Scaling up farmer-managed natural regeneration in Africa to restore degraded landscapes. Biotropica / related FMNR syntheses; see also IFPRI and World Vision FMNR evidence reviews.",
+        "snippet": "FMNR has restored millions of hectares of parkland in the Sahel, increasing tree cover, fodder and crop microclimates without industrial inputs."
+      }
+    ]
+  },
+  {
+    "id": "managed_grazing",
+    "title": "Rest-rotation grazing with recovery periods",
+    "action": "If livestock are present, replace continuous grazing with paddocks or herding that allows 30–90+ day recovery (climate-specific) and keep animals off riparian zones.",
+    "applies_when": {
+      "land_types": ["pasture", "mixed", "degraded"],
+      "grazing_pressure": ["high", "moderate", "unknown"]
+    },
+    "addresses": ["plant_diversity", "soil_organic_carbon", "soil_moisture", "species_richness"],
+    "why": "Continuous grazing selects for few grazing-tolerant species and compact soils. Timed rest lets palatable perennials recover, rebuilding structure that stores C and water and hosts insects.",
+    "effects": [
+      {
+        "metric": "plant diversity",
+        "direction": "increase",
+        "expected_change": "Return of palatable perennials when rest is real, not nominal",
+        "mechanism": "Release from chronic defoliation"
+      },
+      {
+        "metric": "soil bulk density / infiltration",
+        "direction": "increase",
+        "expected_change": "Infiltration recovers as cover and roots return",
+        "mechanism": "Less hoof compaction + more cover"
+      }
+    ],
+    "time_horizon": "medium",
+    "confidence": "moderate",
+    "synergies": ["fmnr", "riparian_restoration"],
+    "caveats": [
+      "Rotational grazing is not a carbon panacea; evidence for large SOC gains is mixed. Biodiversity and cover benefits are the primary target."
+    ],
+    "citations": [
+      {
+        "source": "Teague et al. / FAO livestock & pasture reviews",
+        "year": 2013,
+        "citation": "Teague, R. et al. (2013). Multi-paddock grazing on rangelands: why the perceptual dichotomy? Journal of Environmental Management.",
+        "snippet": "Adaptive multi-paddock grazing can improve cover and soil function relative to continuous heavy stocking, though effect sizes depend on climate and stocking rate."
+      }
+    ]
+  },
+  {
+    "id": "riparian_restoration",
+    "title": "Restore riparian buffers and wet pockets",
+    "action": "Fence or mark a 10–30 m native vegetated buffer along streams, ponds and wet soaks; stop drainage of remaining wetlands; replant sedges/willows/native riparian trees.",
+    "applies_when": {
+      "land_types": ["cropland", "pasture", "mixed", "wetland", "degraded"]
+    },
+    "addresses": ["species_richness", "habitat_heterogeneity", "water_infiltration", "pollution", "fragmentation"],
+    "why": "Wet edges are biodiversity hotspots and nutrient filters. Drainage and ploughing to the waterline remove disproportionate species and leak nutrients/pesticides downstream.",
+    "effects": [
+      {
+        "metric": "species richness",
+        "direction": "increase",
+        "expected_change": "Riparian zones host outsized fractions of regional fauna; buffers restore that function within years",
+        "mechanism": "Habitat + aquatic-terrestrial coupling"
+      },
+      {
+        "metric": "nutrient and pesticide pollution",
+        "direction": "decrease",
+        "expected_change": "Buffers intercept a large share of overland N, P and sediment",
+        "mechanism": "Slowing flow, denitrification, plant uptake"
+      }
+    ],
+    "time_horizon": "medium",
+    "confidence": "high",
+    "synergies": ["hedgerows_corridors", "ipm_pesticide_reduction", "managed_grazing"],
+    "caveats": [
+      "In malaria or schistosomiasis zones, standing water design must follow public-health guidance."
+    ],
+    "citations": [
+      {
+        "source": "IPBES 2019",
+        "year": 2019,
+        "citation": "IPBES (2019). Global Assessment Report on Biodiversity and Ecosystem Services.",
+        "snippet": "Freshwater and wetland systems are among the most degraded globally; restoring hydrological connectivity is a priority intervention."
+      },
+      {
+        "source": "Naiman & Décamps 1997",
+        "year": 1997,
+        "citation": "Naiman, R.J. & Décamps, H. (1997). The ecology of interfaces: riparian zones. Annual Review of Ecology and Systematics, 28, 621–658.",
+        "snippet": "Riparian interfaces control nutrient fluxes and support distinct, species-rich communities."
+      }
+    ]
+  },
+  {
+    "id": "invasive_control",
+    "title": "Prioritized invasive species control before replanting",
+    "action": "Map dominant invasives; remove seed sources first; revegetate gaps immediately with competitive natives so bare ground is not re-invaded.",
+    "applies_when": {
+      "land_types": ["degraded", "pasture", "mixed", "forest", "wetland"]
+    },
+    "addresses": ["plant_diversity", "habitat_heterogeneity", "species_richness"],
+    "why": "Planting into an invasive-dominated matrix wastes restoration effort. Invasives homogenize habitat and alter fire, hydrology and soil biota.",
+    "effects": [
+      {
+        "metric": "native plant diversity",
+        "direction": "increase",
+        "expected_change": "Native richness recovers when control is followed by active revegetation",
+        "mechanism": "Competitive release"
+      }
+    ],
+    "time_horizon": "medium",
+    "confidence": "moderate",
+    "synergies": ["fmnr", "riparian_restoration", "pollinator_strips"],
+    "caveats": [
+      "Some 'invasives' provide current livelihood fuel or fodder — pair control with alternatives.",
+      "Blanket herbicide control can harm non-targets; mechanical + targeted methods first."
+    ],
+    "citations": [
+      {
+        "source": "IPBES IAS 2023",
+        "year": 2023,
+        "citation": "IPBES (2023). Assessment Report on Invasive Alien Species and their Control.",
+        "snippet": "Invasive alien species are a top driver of biodiversity loss; prevention and early control outperform late, untargeted campaigns."
+      }
+    ]
+  }
+]

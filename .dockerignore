@@ -1,0 +1,10 @@
+.git
+.venv
+venv
+__pycache__
+*.pyc
+.pytest_cache
+.env
+data/sessions
+data/index
+.DS_Store

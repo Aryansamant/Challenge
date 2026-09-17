@@ -1,0 +1,10 @@
+services:
+  biointel:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+      - ENABLE_GEO_CLIMATE=true
+    volumes:
+      - ./data/sessions:/app/data/sessions

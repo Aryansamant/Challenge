@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BioIntel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="/">
+      <span class="mark" aria-hidden="true"></span>
+      <span class="name">BioIntel</span>
+    </a>
+    <p class="meta" id="status">Grounded environmental reasoning</p>
+  </header>
+
+  <main>
+    <section class="chat-pane">
+      <ol class="log" id="log"></ol>
+      <form id="composer">
+        <div class="examples" id="examples">
+          <button type="button" data-example="decline">Incomplete report</button>
+          <button type="button" data-example="brief">Hackathon example</button>
+          <button type="button" data-example="json">JSON</button>
+          <button type="button" data-example="geo">Coordinates</button>
+        </div>
+        <div class="composer-box">
+          <textarea id="message" rows="2" placeholder="Describe the land, or paste a JSON profile…"></textarea>
+          <div class="composer-row">
+            <details class="geo">
+              <summary>Location</summary>
+              <label>Lat <input id="lat" type="number" step="0.0001" placeholder="optional" /></label>
+              <label>Lon <input id="lon" type="number" step="0.0001" placeholder="optional" /></label>
+            </details>
+            <button type="submit" id="send">Send</button>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <aside class="inspect">
+      <nav class="tabs">
+        <button class="active" data-tab="profile">Site</button>
+        <button data-tab="diagnosis">Diagnosis</button>
+        <button data-tab="evidence">Evidence</button>
+        <button data-tab="graph">Causes</button>
+      </nav>
+      <div class="tab active" id="tab-profile">
+        <div id="profile" class="empty">No site data yet. Three variables — soil, climate, land use — unlock recommendations.</div>
+      </div>
+      <div class="tab" id="tab-diagnosis">
+        <div id="meters"></div>
+        <div id="recs"></div>
+        <p class="empty" id="diagnosis-empty">Diagnosis appears after a complete profile.</p>
+      </div>
+      <div class="tab" id="tab-evidence">
+        <ol id="evidence"></ol>
+        <p class="empty" id="evidence-empty">Retrieved sources will show here.</p>
+      </div>
+      <div class="tab" id="tab-graph">
+        <svg id="graph" viewBox="0 0 420 240" role="img" aria-label="Causal metric graph"></svg>
+        <ul id="chains"></ul>
+        <p class="empty" id="graph-empty">Causal links appear with a diagnosis.</p>
+      </div>
+    </aside>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>

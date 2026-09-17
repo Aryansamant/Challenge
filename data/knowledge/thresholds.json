@@ -1,0 +1,44 @@
+{
+  "soil_organic_carbon_pct": {
+    "metric": "soil organic carbon",
+    "unit": "%",
+    "context_adjustments": {
+      "arid": { "critical": 0.4, "poor": 0.8, "moderate": 1.2 },
+      "semi-arid": { "critical": 0.5, "poor": 1.0, "moderate": 1.6 },
+      "sub-humid": { "critical": 0.8, "poor": 1.5, "moderate": 2.5 },
+      "humid": { "critical": 1.0, "poor": 2.0, "moderate": 3.5 },
+      "default": { "critical": 0.6, "poor": 1.2, "moderate": 2.0 }
+    },
+    "notes": "Agricultural soils often range 0.5–4% SOC. The 4 per 1000 initiative treats even small annual SOC gains as climatically and biologically meaningful (Minasny et al. 2017). Semi-arid cultivated soils below ~0.5% have severely impaired microbial habitat (FAO 2017)."
+  },
+  "ph": {
+    "metric": "soil pH",
+    "unit": "pH",
+    "bands": {
+      "critical_acid": 5.0,
+      "poor_acid": 5.5,
+      "adequate_low": 6.0,
+      "adequate_high": 7.5,
+      "poor_alkaline": 8.3,
+      "critical_alkaline": 8.8
+    },
+    "notes": "Most soil bacteria, nutrient cycling enzymes, and temperate crops perform best near pH 6.0–7.5. Below 5.5, Al/Mn toxicity and P fixation increase; above ~8.3, micronutrient availability collapses (Brady & Weil; FAO soils)."
+  },
+  "rainfall": {
+    "metric": "rainfall regime",
+    "order": ["arid", "semi-arid", "sub-humid", "humid", "very-wet"],
+    "mm_bands": {
+      "arid": [0, 250],
+      "semi-arid": [250, 500],
+      "sub-humid": [500, 1000],
+      "humid": [1000, 2000],
+      "very-wet": [2000, 10000]
+    }
+  },
+  "native_cover_pct": {
+    "metric": "native / semi-natural cover",
+    "unit": "%",
+    "bands": { "critical": 10, "poor": 20, "moderate": 40 },
+    "notes": "Landscape-scale biodiversity and pollination often decline sharply when semi-natural habitat falls below ~10–20% of the mosaic (Dainese et al. 2019; Haddad et al. 2015)."
+  }
+}
